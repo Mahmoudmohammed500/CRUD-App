@@ -1,0 +1,9 @@
+.form {
+    width: 800px
+}
+.form fieldset {
+    color:#212529;
+    border:solid 1px #212529;
+    border-radius: 15px;
+    padding: 30px;
+}

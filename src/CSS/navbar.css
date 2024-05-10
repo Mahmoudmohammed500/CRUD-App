@@ -1,0 +1,15 @@
+.nav-element {
+    justify-content: space-between;
+}
+.navbar {
+   padding-left: 65px;
+   padding-right: 55px;
+   
+}
+
+.nav-link {
+    color:rgb(0 0 0 / 65%);
+}
+.nav-link:hover {
+    color: rgb(0 0 0);
+}

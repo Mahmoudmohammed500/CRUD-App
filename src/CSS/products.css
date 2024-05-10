@@ -1,0 +1,10 @@
+.products-table td {
+max-width: 100px;
+text-align: center;
+}
+.products-table th {
+    text-align: center;
+}
+.btn {
+    margin-right: 10px;
+}
