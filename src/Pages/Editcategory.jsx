@@ -26,8 +26,8 @@ function Editcategory() {
             // put new data to server by Fetch( )
             fetch(`https://json-server-for-crud-app-repositry.onrender.com/categories/${categoryid}`, {
                 method: "put",
-                Headers: {
-                    "Content-type": "Aplication/json"
+                headers: {
+                    "Content-type": "application/json"
                 },
                 body: JSON.stringify({
                     title,

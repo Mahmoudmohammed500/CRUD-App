@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import '../CSS/form.css';
@@ -10,11 +10,11 @@ function Addproduct() {
 
   const FormSubmit = (e) => {
     e.preventDefault()
-     // post new data to server by Fetch( )
+    // post new data to server by Fetch( )
     fetch("https://json-server-for-crud-app-repositry.onrender.com/products", { //"http://localhost:9000/products" this is the local json server url
       method: "post",
-      Headers: {
-        "Content-type": "Aplication/json"
+      headers: {
+        "Content-type": "application/json"
       },
       body: JSON.stringify({
         title,
@@ -22,8 +22,10 @@ function Addproduct() {
         price
       })
     })
-    .then((res) => res.json)
-    .then(() =>  navegate('../products'))
+      .then((res) => res.json)
+      .then(() => {
+      })
+      .then(() => navegate('../products'))
 
     /*
     // Post data to server by axios library
@@ -36,7 +38,6 @@ function Addproduct() {
     navegate('../products')
     */
   }
-
   return (
     <>
       <h1 className="text-center">Add Product</h1>
@@ -44,22 +45,22 @@ function Addproduct() {
 
       <form className="container form" onSubmit={FormSubmit}>
         <fieldset>
-        <div className="mb-3">
-          <label htmlFor="producttitle" className="form-label">Title</label>
-          <input type="text" className="form-control" id="producttitle" placeholder="Product Title" aria-describedby="Product Title" onChange={(e) => { settitle(e.target.value) }} />
-        </div>
-        <br></br>
-        <div className="mb-3">
-          <label htmlFor="productdescription" className="form-label">Description</label>
-          <input type="text" className="form-control" id="productdescription" placeholder="Product Description" aria-describedby="Product Description" onChange={(e) => { setdescription(e.target.value) }} />
-        </div>
-        <br></br>
-        <div className="mb-3">
-          <label htmlFor="productprice" className="form-label">price</label>
-          <input type="number" className="form-control" id="productprice" placeholder="Product Price" aria-describedby="Product Price" onChange={(e) => { setprice(e.target.value) }} />
-        </div>
-        <br></br>
-        <button type="submit" className="btn btn-primary d-block m-auto">Add Product</button>
+          <div className="mb-3">
+            <label htmlFor="producttitle" className="form-label">Title</label>
+            <input type="text" className="form-control" id="producttitle" placeholder="Product Title" aria-describedby="Product Title" onChange={(e) => { settitle(e.target.value) }} />
+          </div>
+          <br></br>
+          <div className="mb-3">
+            <label htmlFor="productdescription" className="form-label">Description</label>
+            <input type="text" className="form-control" id="productdescription" placeholder="Product Description" aria-describedby="Product Description" onChange={(e) => { setdescription(e.target.value) }} />
+          </div>
+          <br></br>
+          <div className="mb-3">
+            <label htmlFor="productprice" className="form-label">price</label>
+            <input type="number" className="form-control" id="productprice" placeholder="Product Price" aria-describedby="Product Price" onChange={(e) => { setprice(e.target.value) }} />
+          </div>
+          <br></br>
+          <button type="submit" className="btn btn-primary d-block m-auto">Add Product</button>
         </fieldset>
       </form>
     </>

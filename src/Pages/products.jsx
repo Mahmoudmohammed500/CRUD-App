@@ -57,12 +57,12 @@ function Products() {
                 </thead>
                 <tbody>
                     {
-                        Products.map((product) => {
+                        Products?.map((product) => {
                             return (
                                 <tr key={product.id}>
                                     <td>{product.id}</td>
-                                    <td>{product.title.slice(0, 28)}...</td>
-                                    <td>{product.description.slice(0, 30)}...</td>
+                                    <td>{product.title?.slice(0, 28)}...</td>
+                                    <td>{product.description?.slice(0, 30)}...</td>
                                     <td>{product.price}$</td>
                                     <td>
                                         <button className="btn btn-danger btn-sm" onClick={() => { DeleteProducts(product) }}> Delete</button>

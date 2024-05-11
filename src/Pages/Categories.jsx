@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 function Categories() {
     const [Categories, setCategories] = useState([]);
-    let API_URL = 'https://json-server-for-crud-app-repositry.onrender.com/categories'; // this is http://localhost:9000/categories the local json server URL
+    let API_URL = 'https://json-server-for-crud-app-repositry.onrender.com/categories';  // this is http://localhost:9000/categories the local json server URL
       
     const GetAllGategories = () => {
         fetch(API_URL)
@@ -52,7 +52,7 @@ function Categories() {
                 </thead>
                 <tbody>
                     {
-                        Categories.map((cat) => {
+                        Categories?.map((cat) => {
                             return (
                                 <tr key={cat.id}>
                                     <td>{cat.id}</td>
