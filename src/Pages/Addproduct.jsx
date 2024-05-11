@@ -11,7 +11,7 @@ function Addproduct() {
   const FormSubmit = (e) => {
     e.preventDefault()
      // post new data to server by Fetch( )
-    fetch("http://localhost:9000/products", {
+    fetch("https://json-server-for-crud-app-repositry.onrender.com/products", { //"http://localhost:9000/products" this is the local json server url
       method: "post",
       Headers: {
         "Content-type": "Aplication/json"

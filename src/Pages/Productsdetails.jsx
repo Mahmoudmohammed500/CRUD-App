@@ -6,7 +6,7 @@ function Productsdetails() {
     let { productid } = useParams();
     const [Product, setProduct] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:9000/products/${productid}`)
+        fetch(`https://json-server-for-crud-app-repositry.onrender.com/products/${productid}`)
             .then((res) => res.json())
             .then((data) => setProduct(data))
         // The next code line to scroll up to the beginning of the page

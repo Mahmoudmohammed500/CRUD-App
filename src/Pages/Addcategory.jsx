@@ -10,7 +10,7 @@ function Addcategory() {
     const FormSubmit = (e) => {
         e.preventDefault()
         // post new data to server by Fetch( )
-        fetch("http://localhost:9000/categories", {
+        fetch("https://json-server-for-crud-app-repositry.onrender.com/categories", {
             method: "post",
             Headers: {
                 "Content-type": "Aplication/json"

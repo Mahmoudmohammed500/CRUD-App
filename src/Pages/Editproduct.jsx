@@ -12,7 +12,7 @@ function Editproduct() {
     const navegate = useNavigate();
     const [Product, setProduct] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:9000/products/${productid}`)
+        fetch(`https://json-server-for-crud-app-repositry.onrender.com/products/${productid}`)
             .then((res) => res.json())
             .then((data) => setProduct(data))
     }, [])
@@ -24,7 +24,7 @@ function Editproduct() {
             title: ` Product Data Edited successfully`,
         }).then(() => {
             // put new data to server by Fetch( )
-            fetch(`http://localhost:9000/products/${productid}`, {
+            fetch(`https://json-server-for-crud-app-repositry.onrender.com/products/${productid}`, {
                 method: "put",
                 Headers: {
                     "Content-type": "Aplication/json"

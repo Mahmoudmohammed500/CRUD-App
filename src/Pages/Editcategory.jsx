@@ -12,7 +12,7 @@ function Editcategory() {
     const navegate = useNavigate();
     const [Category, setCategory] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:9000/categories/${categoryid}`)
+        fetch(`https://json-server-for-crud-app-repositry.onrender.com/categories/${categoryid}`)
             .then((res) => res.json())
             .then((data) => setCategory(data))
     }, [])
@@ -24,7 +24,7 @@ function Editcategory() {
             title: ` Product Data Edited successfully`,
         }).then(() => {
             // put new data to server by Fetch( )
-            fetch(`http://localhost:9000/categories/${categoryid}`, {
+            fetch(`https://json-server-for-crud-app-repositry.onrender.com/categories/${categoryid}`, {
                 method: "put",
                 Headers: {
                     "Content-type": "Aplication/json"

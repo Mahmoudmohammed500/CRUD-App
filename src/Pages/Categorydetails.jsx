@@ -4,7 +4,7 @@ function Categorydetails() {
     let { categoryid } = useParams();
     const [Category, setCategory] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:9000/categories/${categoryid}`)
+        fetch(`https://json-server-for-crud-app-repositry.onrender.com/categories/${categoryid}`)
             .then((res) => res.json())
             .then((data) => setCategory(data))
         // The next code line to scroll up to the beginning of the page

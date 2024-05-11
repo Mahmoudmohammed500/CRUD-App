@@ -4,8 +4,8 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 function Categories() {
     const [Categories, setCategories] = useState([]);
-    let API_URL = 'http://localhost:9000/categories';
-
+    let API_URL = 'https://json-server-for-crud-app-repositry.onrender.com/categories'; // this is http://localhost:9000/categories the local json server URL
+      
     const GetAllGategories = () => {
         fetch(API_URL)
             .then((res) => res.json())
@@ -24,7 +24,7 @@ function Categories() {
             showCancelButton: true
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`http://localhost:9000/categories/${category.id}`, {
+                fetch(`https://json-server-for-crud-app-repositry.onrender.com/categories/${category.id}`, {
                     method: 'delete'
                 })
                     .then((res) => res.json)

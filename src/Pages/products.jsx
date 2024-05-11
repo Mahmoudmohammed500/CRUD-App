@@ -6,8 +6,8 @@ import withReactContent from 'sweetalert2-react-content'
 
 function Products() {
     const [Products, setProducts] = useState([]);
-    let API_URL = 'http://localhost:9000/products';
-
+    let API_URL = 'https://json-server-for-crud-app-repositry.onrender.com/products'; //"http://localhost:9000/products" this is the local json server url
+    
     const GetAllProducts = () => {
         fetch(API_URL)
             .then((res) => res.json())
@@ -27,7 +27,7 @@ function Products() {
             showCancelButton: true
         }).then((data) => {
             if (data.isConfirmed) {
-                fetch(`http://localhost:9000/products/${Product.id}`, {
+                fetch(`https://json-server-for-crud-app-repositry.onrender.com/products/${Product.id}`, {
                     method: 'delete'
                 })
                     .then((res) => res.json)
