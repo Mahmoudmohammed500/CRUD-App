@@ -1,4 +1,5 @@
  # CRUD App =>
+               * Using React.js
                * Using Bootstrab and Css for styling
                * Using Fontawesome Icons v5
                * Using Json Server for Manipulating products Data
